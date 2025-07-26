@@ -31,6 +31,11 @@ const Header = () => {
         </NavLink>
       </li>
       <li>
+        <NavLink to="/dashboard" className="hover:underline">
+          Dashboard
+        </NavLink>
+      </li>
+      <li>
         <NavLink to="/request" className="hover:underline">
           My Request
         </NavLink>

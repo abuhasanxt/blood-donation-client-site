@@ -12,6 +12,7 @@ import axios from "axios";
 import MyFood from "../pages/MyFood";
 import RequestedFoods from "../pages/RequestedFoods";
 import Update from "../pages/Update";
+import Dashboard from "../pages/Dashboard";
 
 const mainRoutes = createBrowserRouter([
   {
@@ -73,6 +74,10 @@ const mainRoutes = createBrowserRouter([
       {
         path: "login",
         element: <Login></Login>,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard></Dashboard>,
       },
       {
         path: "registration",
