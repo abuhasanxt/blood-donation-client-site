@@ -11,7 +11,7 @@ import {
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import app from "../firebase/firebase.config";
-import axios from "axios";
+
 import Swal from "sweetalert2";
 import useAxiosPublic from "../Utility/axiosPublic";
 
@@ -66,6 +66,7 @@ const AuthProvider = ({ children }) => {
       //   },
       // });
 
+      setUser(currentUser);
       if (currentUser) {
         axiosPublic
           .post("/add-donor", {
@@ -74,7 +75,6 @@ const AuthProvider = ({ children }) => {
             loginCount: 1,
           })
           .then((res) => {
-            setUser(currentUser);
             console.log(res.data);
           });
       }
