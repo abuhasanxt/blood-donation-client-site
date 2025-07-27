@@ -21,21 +21,21 @@ const Header = () => {
           Available Foods
         </NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink to="/my-food" className="hover:underline">
           My Foods
         </NavLink>
-      </li>
+      </li> */}
       <li>
         <NavLink to="/dashboard" className="hover:underline">
           Dashboard
         </NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink to="/request" className="hover:underline">
           My Request
         </NavLink>
-      </li>
+      </li> */}
     </>
   );
   return (

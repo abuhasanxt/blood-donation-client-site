@@ -3,11 +3,14 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { Link, useNavigate } from "react-router";
 import Swal from "sweetalert2";
+import districts from "../../public/district.json"
+import upazilas from "../../public/upazila.json"
 
-const AddFoods = () => {
+const AddDonation = () => {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
-  console.log("🚀 ~ AddFoods ~ user:", user);
+  // console.log("🚀 ~ AddDonation ~ user:", user)
+ 
   const [formData, setFormData] = useState({
     name: "",
     img: "",
@@ -58,6 +61,27 @@ const AddFoods = () => {
         className="max-w-xl mx-auto p-6 bg-white rounded-xl shadow-md space-y-6"
       >
         <h2 className="text-2xl font-semibold text-center">Add a Foods </h2>
+
+        <div>
+           <span className="text-xl font-medium">Districts</span>
+          <select  className="border w-full border-gray-300 rounded-md px-3 py-1 text-xl" name="" id="">
+          {
+            districts.map((district)=><option key={district.id} value="">{district.name}</option>)
+            
+          }
+           
+        </select>
+        </div>
+        <div>
+           <span className="text-xl font-medium">Upazilas</span>
+          <select  className="border w-full border-gray-300 rounded-md px-3 py-1 text-xl" name="" id="">
+          {
+            upazilas.map((upazila)=><option key={upazila.id} value="">{upazila.name}</option>)
+            
+          }
+           
+        </select>
+        </div>
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -150,4 +174,4 @@ const AddFoods = () => {
   );
 };
 
-export default AddFoods;
+export default AddDonation;

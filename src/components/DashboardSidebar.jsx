@@ -27,24 +27,29 @@ const DashboardSidebar = ({ role, loading }) => {
 
       {/* Navigation Links */}
       <nav className="space-y-2">
-        <NavLink
-          to="/dashboard"
-          className="flex items-center gap-3 p-2  hover:bg-red-200 transition"
-        >
-          <FaHome /> <span>Dashboard</span>
-        </NavLink>
-
-        <NavLink
-          to="/dashboard/profile"
-          className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
-        >
-          <FaUser /> <span>My Profile</span>
-        </NavLink>
-
         {/* Donor only */}
 
         {role === "donor" && (
           <>
+            <NavLink
+              to="dashboard"
+              className="flex items-center gap-3 p-2  hover:bg-red-200 transition"
+            >
+              <FaHome /> <span>Donor Dashboard</span>
+            </NavLink>
+
+            <NavLink
+              to="/dashboard/profile"
+              className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
+            >
+              <FaUser /> <span>My Profile</span>
+            </NavLink>
+            <NavLink
+              to="my-donation"
+              className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
+            >
+              <FaTint /> <span>My Donation</span>
+            </NavLink>
             <NavLink
               to="my-requests"
               className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
@@ -63,6 +68,19 @@ const DashboardSidebar = ({ role, loading }) => {
         {/* Admin only */}
         {role === "admin" && (
           <>
+            <NavLink
+              to="dashboard"
+              className="flex items-center gap-3 p-2  hover:bg-red-200 transition"
+            >
+              <FaHome /> <span>Admin Dashboard</span>
+            </NavLink>
+
+            <NavLink
+              to="/dashboard/profile"
+              className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
+            >
+              <FaUser /> <span>My Profile</span>
+            </NavLink>
             <NavLink
               to="/dashboard/all-users"
               className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
@@ -93,6 +111,19 @@ const DashboardSidebar = ({ role, loading }) => {
         {/* Volunteer only */}
         {role === "volunteer" && (
           <>
+            <NavLink
+              to="/dashboard"
+              className="flex items-center gap-3 p-2  hover:bg-red-200 transition"
+            >
+              <FaHome /> <span>Volunteer Dashboard</span>
+            </NavLink>
+
+            <NavLink
+              to="/dashboard/profile"
+              className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
+            >
+              <FaUser /> <span>My Profile</span>
+            </NavLink>
             <NavLink
               to="/dashboard/all-blood-donation-request"
               className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"

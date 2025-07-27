@@ -4,7 +4,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { FcBusinessman } from "react-icons/fc";
 import { Link } from "react-router";
 
-const RequestedFoods = () => {
+const MyRequest = () => {
   const { user } = useContext(AuthContext);
   const [foods, setFoods] = useState([]);
 
@@ -26,12 +26,12 @@ const RequestedFoods = () => {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <h2 className="text-2xl text-center font-bold mb-4">
-        📋 Requested Foods
+        📋 Requested Blood
       </h2>
       {foods.length === 0 ? (
         <div className="text-center space-y-4">
-            <p className="text-gray-500 text-xl">No requested foods yet.</p>
-            <Link to='/available-food' className="btn btn-primary w-sm">Food Request</Link>
+            <p className="text-gray-500 text-xl">No requested  yet.</p>
+            <Link to='/available-food' className="btn btn-primary w-sm">Blood Request</Link>
         </div>
       ) : (
         <div className="grid md:grid-cols-2 gap-6">
@@ -96,4 +96,4 @@ const RequestedFoods = () => {
   );
 };
 
-export default RequestedFoods;
+export default MyRequest;

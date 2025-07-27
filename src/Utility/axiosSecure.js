@@ -4,7 +4,7 @@ import { AuthContext } from "../providers/AuthProvider";
 
 const useAxiosSecure = () => {
   const { user } = useContext(AuthContext);
-  console.log("🚀 ~ useAxiosSecure ~ user:", user.accessToken);
+  // console.log("🚀 ~ useAxiosSecure ~ user:", user.accessToken);
   const instance = axios.create({
     baseURL: "http://localhost:5000",
     headers: {

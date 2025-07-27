@@ -6,7 +6,7 @@ import { Link } from "react-router";
 import { motion } from "motion/react";
 import Swal from "sweetalert2";
 
-const MyFood = () => {
+const MyDonation = () => {
   const { user } = useContext(AuthContext);
   const [foods, setFoods] = useState([]);
   console.log("🚀 ~ MyFood ~ foods:", foods);
@@ -59,7 +59,7 @@ const MyFood = () => {
         }}
         className="text-center text-3xl font-bold"
       >
-        My Foods
+        My Donation
       </motion.h2>
 
       {foods.length === 0 ? (
@@ -145,7 +145,7 @@ const MyFood = () => {
   );
 };
 
-export default MyFood;
+export default MyDonation;
 
 //  <div className="grid grid-cols-1 md:grid-cols-2 p-4 lg:grid-cols-3 gap-5">
 //         {foods.map((food) => (

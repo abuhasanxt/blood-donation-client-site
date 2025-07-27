@@ -5,15 +5,17 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
-import AddFoods from "../pages/AddFoods";
+import AddFoods from "../pages/AddDonation";
 import AvailableFoods from "../pages/AvailableFoods";
 import FoodDetails from "../pages/FoodDetails";
 import axios from "axios";
-import MyFood from "../pages/MyFood";
-import RequestedFoods from "../pages/RequestedFoods";
+import MyFood from "../pages/MyDonation";
+import RequestedFoods from "../pages/MyRequest";
 import Update from "../pages/Update";
 import Dashboard from "../pages/Dashboard";
 import DashboardLayout from "../layouts/DashboardLayout";
+import MyDonation from "../pages/MyDonation";
+import MyRequest from "../pages/MyRequest";
 
 const mainRoutes = createBrowserRouter([
   {
@@ -42,14 +44,14 @@ const mainRoutes = createBrowserRouter([
       //     </PrivateRoute>
       //   ),
       // },
-      {
-        path: "/my-food",
-        element: (
-          <PrivateRoute>
-            <MyFood></MyFood>
-          </PrivateRoute>
-        ),
-      },
+      // {
+      //   path: "/my-food",
+      //   element: (
+      //     <PrivateRoute>
+      //       <MyFood></MyFood>
+      //     </PrivateRoute>
+      //   ),
+      // },
       {
         path: "/details/:foodId",
         loader: async ({ params }) => {
@@ -78,7 +80,10 @@ const mainRoutes = createBrowserRouter([
 
           },{
             path:'my-requests',
-            element: <RequestedFoods></RequestedFoods>
+            element: <MyRequest></MyRequest>
+          },{
+            path:'my-donation',
+            element:<MyDonation></MyDonation>
           }
         ]
       },
