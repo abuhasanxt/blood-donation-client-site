@@ -15,11 +15,7 @@ const Header = () => {
           Home
         </NavLink>
       </li>
-      <li>
-        <NavLink to="/add-food" className="hover:underline">
-          Add Food
-        </NavLink>
-      </li>
+     
       <li>
         <NavLink to="/available-food" className="hover:underline">
           Available Foods

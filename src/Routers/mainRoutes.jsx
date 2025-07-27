@@ -13,6 +13,7 @@ import MyFood from "../pages/MyFood";
 import RequestedFoods from "../pages/RequestedFoods";
 import Update from "../pages/Update";
 import Dashboard from "../pages/Dashboard";
+import DashboardLayout from "../layouts/DashboardLayout";
 
 const mainRoutes = createBrowserRouter([
   {
@@ -28,27 +29,19 @@ const mainRoutes = createBrowserRouter([
         path: "/available-food",
         Component: AvailableFoods,
       },
-      {
-        path: "/add-food",
-        element: (
-          <PrivateRoute>
-            <AddFoods></AddFoods>
-          </PrivateRoute>
-        ),
-      },
        {
         path:'update/:id',
         loader:({params})=>fetch(`http://localhost:5000/add-food/${params.id}`),
         Component:Update
       },
-      {
-        path: "/request",
-        element: (
-          <PrivateRoute>
-            <RequestedFoods></RequestedFoods>
-          </PrivateRoute>
-        ),
-      },
+      // {
+      //   path: "/request",
+      //   element: (
+      //     <PrivateRoute>
+      //       <RequestedFoods></RequestedFoods>
+      //     </PrivateRoute>
+      //   ),
+      // },
       {
         path: "/my-food",
         element: (
@@ -77,7 +70,17 @@ const mainRoutes = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <Dashboard></Dashboard>,
+        Component:DashboardLayout,
+        children:[
+          {
+            path:'create-request',
+            element:<AddFoods></AddFoods>
+
+          },{
+            path:'my-requests',
+            element: <RequestedFoods></RequestedFoods>
+          }
+        ]
       },
       {
         path: "registration",
