@@ -68,12 +68,9 @@ const DashboardSidebar = ({ role, loading }) => {
         {/* Admin only */}
         {role === "admin" && (
           <>
-            <NavLink
-              to="dashboard"
-              className="flex items-center gap-3 p-2  hover:bg-red-200 transition"
-            >
+            <h2 className="flex items-center gap-3 p-2  bg-green-200">
               <FaHome /> <span>Admin Dashboard</span>
-            </NavLink>
+            </h2>
 
             <NavLink
               to="/dashboard/profile"
