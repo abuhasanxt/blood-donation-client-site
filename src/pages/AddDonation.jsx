@@ -468,7 +468,7 @@ const AddDonation = () => {
           showConfirmButton: false,
           timer: 1500,
         });
-        navigate("/my-food");
+        navigate("/dashboard/my-donation");
       }
     });
   };
@@ -550,26 +550,7 @@ const AddDonation = () => {
           </select>
         </div>
 
-        {/* Other inputs (Food Name, Image, etc.) */}
-        {/* <input
-          type="text"
-          name="name"
-          placeholder="Food Name"
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full border border-gray-300 rounded-lg px-4 py-2"
-          required
-        /> */}
-
-        {/* <input
-          type="url"
-          name="img"
-          placeholder="Image URL"
-          value={formData.img}
-          onChange={handleChange}
-          className="w-full border border-gray-300 rounded-lg px-4 py-2"
-          required
-        /> */}
+     
 
         <div>
          

@@ -2,6 +2,8 @@ import React from "react";
 import useRole from "../Utility/useRole";
 import { Navigate } from "react-router";
 import AdminDashboard from "./AdminDashboard";
+import DonorDashboard from "./DonorDashboard";
+import VolunteerDashboard from "./VolunteerDashboard";
 
 const Dashboard = () => {
   const { role, loading } = useRole();
@@ -11,10 +13,10 @@ const Dashboard = () => {
   }
 
   if (role=== "donor") {
-   return <h2>Donor Dashboard</h2>
+   return <DonorDashboard></DonorDashboard>
   }
   if (role=== "volunteer") {
-   return <h2>Volunteer Dashboard</h2>
+   return <VolunteerDashboard></VolunteerDashboard>
   }
   if (role=== "admin") {
     return <AdminDashboard></AdminDashboard>

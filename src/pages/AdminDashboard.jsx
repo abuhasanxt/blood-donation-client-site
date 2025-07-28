@@ -6,9 +6,9 @@ import useAxiosSecure from "../Utility/axiosSecure";
 const AdminDashboard = () => {
  
 const [stats, setStats]=useState({
-    totalUsers : 120,
-   totalFunding : 53420, 
-   totalRequests : 87,
+    totalUsers :0,
+   totalFunding : 0, 
+   totalRequests : 0,
 })
 
 

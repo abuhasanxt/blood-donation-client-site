@@ -111,6 +111,7 @@ const MyDonation = () => {
                   <th className="px-4 py-2">Blood Group</th>
                   <th className="px-4 py-2">Location</th>
                   <th className="px-4 py-2">Date</th>
+                  <th className="px-4 py-2">Time</th>
                   <th className="px-4 py-2">Note</th>
                   <th className="px-4 py-2">Status</th>
                   <th className="px-4 py-2">Action</th>
@@ -139,6 +140,7 @@ const MyDonation = () => {
                     <td className="px-4 py-2">{food.blood_group_name}</td>
                     <td className="px-4 py-2">{food.location}</td>
                     <td className="px-4 py-2">{food.date}</td>
+                    <td className="px-4 py-2">{food.time}</td>
                     <td className="px-4 py-2">{food.note || "N/A"}</td>
                     <td className="px-4 py-2">
                       <span

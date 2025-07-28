@@ -4,19 +4,22 @@ import { FcBusinessman } from "react-icons/fc";
 import axios from "axios";
 import { AuthContext } from "../providers/AuthProvider";
 
-const FoodDetails = () => {
-
-  const {user}=useContext(AuthContext);
+const BloodDetails = () => {
+  const { user } = useContext(AuthContext);
   const food = useLoaderData();
-const handleRequest=()=>{
-  axios
-      .patch(`http://localhost:5000/request/${food._id}`, {},{
-        headers: {
-          Authorization: `Bearer ${user.accessToken}`,
-        },
-      })
+  const handleRequest = () => {
+    axios
+      .patch(
+        `http://localhost:5000/request/${food._id}`,
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${user.accessToken}`,
+          },
+        }
+      )
       .then((res) => console.log(res.data));
-}
+  };
   return (
     <div>
       <h2 className="text-xl font-bold text-center">Food Details</h2>
@@ -40,14 +43,9 @@ const handleRequest=()=>{
               alt="owner"
             />
           </div>
-          <h3 className="text-sm text-gray-600">
-            {" "}
-          </h3>
-          <h3 className="text-sm text-gray-600">
-            {" "}
-           ID :{food._id}
-          </h3>
-            ➡️Owner Name:{food.ownerName}
+          <h3 className="text-sm text-gray-600"> </h3>
+          <h3 className="text-sm text-gray-600"> ID :{food._id}</h3>
+          ➡️Owner Name:{food.ownerName}
           <h3 className="text-sm text-gray-600">📧 Email:{food.ownerEmail}</h3>
           <h3 className="text-sm text-gray-600">🍔 Food Name: {food.name}</h3>
           <p className="text-sm text-gray-600">
@@ -61,11 +59,17 @@ const handleRequest=()=>{
           </p>
           {food.note && <p className="text-sm text-gray-700">📝 {food.note}</p>}
           <p>🟢Status: {food.status}</p>
-          <Link to='/request' onClick={handleRequest} className="btn">Requested</Link>
+          <Link
+            to="/dashboard/my-requests"
+            onClick={handleRequest}
+            className="btn"
+          >
+            Requested
+          </Link>
         </div>
       </div>
     </div>
   );
 };
 
-export default FoodDetails;
+export default BloodDetails;

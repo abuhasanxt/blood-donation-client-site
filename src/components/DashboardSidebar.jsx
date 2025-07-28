@@ -31,27 +31,27 @@ const DashboardSidebar = ({ role, loading }) => {
 
         {role === "donor" && (
           <>
-            <NavLink
-              to="dashboard"
-              className="flex items-center gap-3 p-2  hover:bg-red-200 transition"
+            <h2
+              
+              className="bg-green-200 flex items-center gap-3 p-2  "
             >
               <FaHome /> <span>Donor Dashboard</span>
-            </NavLink>
+            </h2>
 
             <NavLink
-              to="/dashboard/profile"
+              to="/dashboard/my-profile"
               className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
             >
               <FaUser /> <span>My Profile</span>
             </NavLink>
             <NavLink
-              to="my-donation"
+              to="/dashboard/my-donation"
               className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
             >
               <FaTint /> <span>My Donation</span>
             </NavLink>
             <NavLink
-              to="my-requests"
+              to="/dashboard/my-requests"
               className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
             >
               <FaTint /> <span>My Requests</span>
@@ -108,12 +108,12 @@ const DashboardSidebar = ({ role, loading }) => {
         {/* Volunteer only */}
         {role === "volunteer" && (
           <>
-            <NavLink
-              to="/dashboard"
-              className="flex items-center gap-3 p-2  hover:bg-red-200 transition"
+            <h2
+             
+              className="flex bg-green-200 items-center gap-3 p-2 "
             >
               <FaHome /> <span>Volunteer Dashboard</span>
-            </NavLink>
+            </h2>
 
             <NavLink
               to="/dashboard/profile"

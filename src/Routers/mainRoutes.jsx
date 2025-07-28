@@ -7,7 +7,7 @@ import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import AddFoods from "../pages/AddDonation";
 import AvailableFoods from "../pages/AvailableFoods";
-import FoodDetails from "../pages/FoodDetails";
+import BloodDetails from "../pages/BloodDetails";
 import axios from "axios";
 import MyFood from "../pages/MyDonation";
 import RequestedFoods from "../pages/MyRequest";
@@ -17,6 +17,7 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import MyDonation from "../pages/MyDonation";
 import MyRequest from "../pages/MyRequest";
 import AllUser from "../pages/AllUser";
+import MyProfile from "../pages/MyProfile";
 
 const mainRoutes = createBrowserRouter([
   {
@@ -63,7 +64,7 @@ const mainRoutes = createBrowserRouter([
         },
         element: (
           <PrivateRoute>
-            <FoodDetails></FoodDetails>
+            <BloodDetails></BloodDetails>
           </PrivateRoute>
         ),
       },
@@ -90,10 +91,14 @@ const mainRoutes = createBrowserRouter([
             element:<AllUser></AllUser>
           },
           {
-            path:'my-requests',
+            path:'/dashboard/my-profile',
+            element:<MyProfile></MyProfile>
+          },
+          {
+            path:'/dashboard/my-requests',
             element: <MyRequest></MyRequest>
           },{
-            path:'my-donation',
+            path:'/dashboard/my-donation',
             element:<MyDonation></MyDonation>
           }
         ]
