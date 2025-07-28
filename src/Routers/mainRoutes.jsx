@@ -16,6 +16,7 @@ import Dashboard from "../pages/Dashboard";
 import DashboardLayout from "../layouts/DashboardLayout";
 import MyDonation from "../pages/MyDonation";
 import MyRequest from "../pages/MyRequest";
+import AllUser from "../pages/AllUser";
 
 const mainRoutes = createBrowserRouter([
   {
@@ -71,14 +72,24 @@ const mainRoutes = createBrowserRouter([
         element: <Login></Login>,
       },
       {
-        path: "/dashboard",
+        path: "dashboard",
         Component:DashboardLayout,
         children:[
+          {
+            index:true,
+            element:<Dashboard></Dashboard>
+
+          },
           {
             path:'create-request',
             element:<AddFoods></AddFoods>
 
-          },{
+          },
+          {
+            path:'/dashboard/all-users',
+            element:<AllUser></AllUser>
+          },
+          {
             path:'my-requests',
             element: <MyRequest></MyRequest>
           },{

@@ -25,7 +25,7 @@ const DashboardSidebar = ({ role, loading }) => {
         BloodCare
       </div>
 
-      {/* Navigation Links */} 
+      {/* Navigation Links */}
       <nav className="space-y-2">
         {/* Donor only */}
 
