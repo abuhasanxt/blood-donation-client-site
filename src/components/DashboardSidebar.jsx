@@ -19,13 +19,13 @@ const DashboardSidebar = ({ role, loading }) => {
     );
   }
   return (
-    <div className="bg-red-100 min-h-screen w-64 p-4 border-r border-red-300 shadow-md">
+    <div className="bg-red-100 min-h-screen  p-4 border-r border-red-300 shadow-md">
       {/* Logo */}
       <div className="text-2xl font-bold text-red-600 mb-6 text-center">
         BloodCare
       </div>
 
-      {/* Navigation Links */}
+      {/* Navigation Links */} 
       <nav className="space-y-2">
         {/* Donor only */}
 
