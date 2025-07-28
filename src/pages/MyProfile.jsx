@@ -1,77 +1,45 @@
-// import React, { useContext } from "react";
-// import { motion } from "framer-motion";
-// import { AuthContext } from "../providers/AuthProvider";
-// const MyProfile = () => {
-//   const { user } = useContext(AuthContext);
- 
-
-//   return (
-//     <div>
-//       <motion.h2
-//         animate={{
-//           color: ["#ff5733", "#33ff33", "#8a33ff"],
-//           transition: { duration: 2, repeat: Infinity },
-//         }}
-//         className="text-center text-3xl font-bold mb-6"
-//       >
-//         My Donation
-//       </motion.h2>
-//       <div className="max-w-sm mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg text-center space-y-4">
-//         <img
-//           src={user.photoURL}
-//           alt="User"
-//           className="w-32 h-32 mx-auto rounded-full border-4 border-red-300 object-cover"
-//         />
-//         <h2 className="text-2xl font-bold text-red-600">Name: {user.displayName}</h2>
-//         <h3 className="text-green-600 text-xl font-semibold">Email: {user.email}</h3>
-
-//         <button className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
-//           Edit Profile
-//         </button>
-//       </div>
-      
-//     </div>
-//   );
-// };
-
-// export default MyProfile;
-
-
-
-
-
-
-
-
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
-import axios from "axios";
+
+import useAxiosSecure from "../Utility/axiosSecure";
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
   const [isEditing, setIsEditing] = useState(false);
-  const [name, setName] = useState(user.displayName);
-  const [photo, setPhoto] = useState(user.photoURL);
+  const [name, setName] = useState("");
+  const [photo, setPhoto] = useState("");
+  const axiosSecure = useAxiosSecure();
+
+  useEffect(() => {
+    if (user) {
+      setName(user.displayName || "");
+      setPhoto(user.photoURL || "");
+    }
+  }, [user]);
 
   const handleUpdate = async (e) => {
     e.preventDefault();
 
+    if (!user?.email) {
+      return Swal.fire("Error", "User email not found", "error");
+    }
+
     const updatedProfile = {
-      name,
-      photo,
+      email: user.email,
+      name: name,
+      photoUrl: photo,
     };
 
     try {
-      const res = await axios.put(
-        `https://your-api-server.com/api/donors/${user.email}`,
-        updatedProfile
-      );
+      const res = await axiosSecure.patch("/update-profile", updatedProfile);
 
       if (res.data.modifiedCount > 0) {
         Swal.fire("Updated!", "Your profile has been updated.", "success");
         setIsEditing(false);
+      } else {
+        Swal.fire("No Changes", "Nothing was updated.", "info");
       }
     } catch (error) {
       console.error("Update failed", error);
@@ -93,12 +61,14 @@ const MyProfile = () => {
 
       <div className="max-w-sm mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg text-center space-y-4">
         <img
-          src={photo}
+          src={photo || "https://i.ibb.co/RpYdqGy/default-avatar.png"}
           alt="User"
           className="w-32 h-32 mx-auto rounded-full border-4 border-red-300 object-cover"
         />
-        <h2 className="text-2xl font-bold text-red-600">{name}</h2>
-        <h3 className="text-gray-600">{user.email}</h3>
+        <h2 className="text-2xl font-bold text-red-600">
+          {name || "No Name Found"}
+        </h2>
+        <h3 className="text-gray-600">{user?.email}</h3>
 
         <button
           onClick={() => setIsEditing(true)}
@@ -108,7 +78,6 @@ const MyProfile = () => {
         </button>
       </div>
 
-      {/* Modal for editing */}
       {isEditing && (
         <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
           <form
@@ -118,6 +87,7 @@ const MyProfile = () => {
             <h3 className="text-xl font-semibold text-center text-red-600">
               Edit Profile
             </h3>
+
             <div>
               <label className="block text-left mb-1">Name</label>
               <input
@@ -127,6 +97,7 @@ const MyProfile = () => {
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
+
             <div>
               <label className="block text-left mb-1">Photo URL</label>
               <input
@@ -136,6 +107,7 @@ const MyProfile = () => {
                 onChange={(e) => setPhoto(e.target.value)}
               />
             </div>
+
             <div className="flex justify-between">
               <button
                 type="button"

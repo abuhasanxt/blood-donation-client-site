@@ -85,15 +85,15 @@ const MyDonation = () => {
           <option value="">-- Filter by Status --</option>
           <option value="available">Available</option>
           <option value="pending">Pending</option>
-          <option value="request">Request</option>
+          <option value="requested">Request</option>
         </select>
       </div>
 
       {filteredFoods.length === 0 ? (
         <div className="text-center space-y-4">
           <p className="text-gray-500 text-xl">No donation found.</p>
-          <Link to="/add-food" className="btn btn-primary">
-            Add Food
+          <Link to="/dashboard/create-request" className="btn btn-primary">
+            Add Donation
           </Link>
         </div>
       ) : (
@@ -145,10 +145,10 @@ const MyDonation = () => {
                     <td className="px-4 py-2">
                       <span
                         className={`px-2 py-1 text-xs font-semibold rounded ${
-                          food.status === "request"
+                          food.status === "requested"
                             ? "bg-red-500 text-white"
                             : food.status === "pending"
-                            ? "bg-yellow-200 text-yellow-800"
+                            ? "bg-green-500 text-yellow-800"
                             : "bg-red-200 text-red-800"
                         }`}
                       >
