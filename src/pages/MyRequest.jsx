@@ -30,8 +30,10 @@ const MyRequest = () => {
       </h2>
       {foods.length === 0 ? (
         <div className="text-center space-y-4">
-            <p className="text-gray-500 text-xl">No requested  yet.</p>
-            <Link to='/available-food' className="btn btn-primary w-sm">Blood Request</Link>
+          <p className="text-gray-500 text-xl">No requested yet.</p>
+          <Link to="/available-food" className="btn btn-primary w-sm">
+            Blood Request
+          </Link>
         </div>
       ) : (
         <div className="grid md:grid-cols-2 gap-6">
@@ -46,31 +48,26 @@ const MyRequest = () => {
                 className=" w-full object-cover"
               />
               <div className="p-4 space-y-2">
-              
-               
                 <h3 className="text-sm text-gray-600"> ID :{food._id}</h3>
                 ➡️Owner Name:{food.ownerName}
                 <h3 className="text-sm text-gray-600">
                   📧 Email:{food.ownerEmail}
                 </h3>
                 <h3 className="text-sm text-gray-600">
-                 District: {food.district}
+                  District: {food.district}
                 </h3>
                 <p className="text-sm text-gray-600">
-                 Upazila:{" "}
-                  <span className="font-medium">{food.upazila}</span>
+                  Upazila: <span className="font-medium">{food.upazila}</span>
                 </p>
                 <p className="text-sm text-gray-600">
                   📍 Location:{" "}
                   <span className="font-medium">{food.location}</span>
                 </p>
                 <p className="text-sm text-gray-600">
-                  ⏳ Date:{" "}
-                  <span className="font-medium">{food.date}</span>
+                  ⏳ Date: <span className="font-medium">{food.date}</span>
                 </p>
                 <p className="text-sm text-gray-600">
-                  ⏳ Time:{" "}
-                  <span className="font-medium">{food.time}</span>
+                  ⏳ Time: <span className="font-medium">{food.time}</span>
                 </p>
                 {food.note && (
                   <p className="text-sm text-gray-700">📝 {food.note}</p>
