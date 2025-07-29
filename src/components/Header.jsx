@@ -1,13 +1,23 @@
 import { useContext } from "react";
 import { CiMenuBurger } from "react-icons/ci";
-import { Link, NavLink } from "react-router";
-import "./Navbar.css"
+import { Link, NavLink, useLocation, useNavigate } from "react-router";
+import "./Navbar.css";
 import { AuthContext } from "../providers/AuthProvider";
 import logo from "../assets/logo.png";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location.pathname);
+  const handleDashboardClick = () => {
+    if (user) {
+      navigate("/dashboard");
+    } else {
+      navigate("/login");
+    }
+  };
   const links = (
     <>
       <li>
@@ -15,27 +25,18 @@ const Header = () => {
           Home
         </NavLink>
       </li>
-     
+
       <li>
         <NavLink to="/available-food" className="hover:underline">
           Available Foods
         </NavLink>
       </li>
-      {/* <li>
-        <NavLink to="/my-food" className="hover:underline">
-          My Foods
-        </NavLink>
-      </li> */}
+
       <li>
-        <NavLink to="/dashboard" className="hover:underline">
+        <button onClick={handleDashboardClick} className="hover:underline">
           Dashboard
-        </NavLink>
+        </button>
       </li>
-      {/* <li>
-        <NavLink to="/request" className="hover:underline">
-          My Request
-        </NavLink>
-      </li> */}
     </>
   );
   return (

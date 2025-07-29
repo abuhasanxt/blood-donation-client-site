@@ -33,10 +33,11 @@ const mainRoutes = createBrowserRouter([
         path: "/available-food",
         Component: AvailableFoods,
       },
-       {
-        path:'update/:id',
-        loader:({params})=>fetch(`http://localhost:5000/add-food/${params.id}`),
-        Component:Update
+      {
+        path: "update/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/add-food/${params.id}`),
+        Component: Update,
       },
       // {
       //   path: "/request",
@@ -74,34 +75,37 @@ const mainRoutes = createBrowserRouter([
       },
       {
         path: "dashboard",
-        Component:DashboardLayout,
-        children:[
+        Component: DashboardLayout,
+        children: [
           {
-            index:true,
-            element:<Dashboard></Dashboard>
-
+            index: true,
+            element: (
+              <PrivateRoute>
+                <Dashboard></Dashboard>
+              </PrivateRoute>
+            ),
           },
           {
-            path:'/dashboard/create-request',
-            element:<AddFoods></AddFoods>
-
+            path: "/dashboard/create-request",
+            element: <AddFoods></AddFoods>,
           },
           {
-            path:'/dashboard/all-users',
-            element:<AllUser></AllUser>
+            path: "/dashboard/all-users",
+            element: <AllUser></AllUser>,
           },
           {
-            path:'/dashboard/my-profile',
-            element:<MyProfile></MyProfile>
+            path: "/dashboard/my-profile",
+            element: <MyProfile></MyProfile>,
           },
           {
-            path:'/dashboard/my-requests',
-            element: <MyRequest></MyRequest>
-          },{
-            path:'/dashboard/my-donation',
-            element:<MyDonation></MyDonation>
-          }
-        ]
+            path: "/dashboard/my-requests",
+            element: <MyRequest></MyRequest>,
+          },
+          {
+            path: "/dashboard/my-donation",
+            element: <MyDonation></MyDonation>,
+          },
+        ],
       },
       {
         path: "registration",
