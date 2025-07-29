@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Homemade Chicken Curry",
+    "title": "Home Cook",
+    "abd": "This platform helped me share my extra meals with those in need. It feels great to reduce food waste!",
+    "photo": "https://i.ibb.co/F4LjQmdV/1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Vegetable Biryani",
+    "title": "Community Volunteer",
+    "abd": "Finding surplus food donations has never been easier. I can quickly collect and distribute to families in our area.",
+    "photo": "https://i.ibb.co/8LY3vqB3/2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Fruit Salad Pack",
+    "title": "Nutrition Advocate",
+    "abd": "The platform connects people and food so efficiently—perfect for spreading healthy meals in local communities.",
+    "photo": "https://i.ibb.co/RGNFHZq1/3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Pasta with Veggies",
+    "title": "Restaurant Manager",
+    "abd": "Impressed by the impact this has on food sustainability. We donate leftovers daily and it’s seamless.",
+    "photo": "https://i.ibb.co/zWZ8FN4p/4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Chocolate Muffins",
+    "title": "Food Blogger",
+    "abd": "Sharing homemade meals with neighbors through this app has been both fun and fulfilling!",
+    "photo": "https://i.ibb.co/9m1JfMZ2/5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Fried Rice Pack",
+    "title": "Food Rescue Volunteer",
+    "abd": "Smooth experience from listing surplus food to coordinating pickups. Love the community vibe!",
+    "photo": "https://i.ibb.co/zh1s18LP/6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Homemade Cookies",
+    "title": "Home Baker",
+    "abd": "I’ve tried many apps, but none made it this easy to donate leftover baked goods locally.",
+    "photo": "https://i.ibb.co/6c5cG4Cg/7.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Leftover Sandwiches",
+    "title": "College Student",
+    "abd": "It’s an ideal platform for students like me to access free meals and avoid going hungry.",
+    "photo": "https://i.ibb.co/Y4FYTSCh/8.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Mixed Veg Soup",
+    "title": "Community Organizer",
+    "abd": "The food sharing system works beautifully. We’ve built strong connections and reduced waste in our block.",
+    "photo": "https://i.ibb.co/zWtSRBDv/9.jpg"
+  }
+]

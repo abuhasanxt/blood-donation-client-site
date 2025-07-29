@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "question": "How do I share surplus food?",
+    "answer": "After logging in, click on the Share Food button in the navigation bar. You’ll be taken to a form where you can enter food name, description, category, pickup location, expiry date, and quantity. Your name and email will be auto-filled from your profile. Once submitted, your food listing will be visible on the Browse Foods page for others to request."
+  },
+  {
+    "id": 2,
+    "question": "Is there any cost to use this platform?",
+    "answer": "No, the platform is completely free to use. You can share food, browse available items, and request food without paying any fee. In the future, we may introduce premium features or verified sharers, but basic usage will always remain free."
+  },
+  {
+    "id": 3,
+    "question": "What happens after I request food?",
+    "answer": "Your request is stored in the database and linked to the specific food item. The food donor will see your request and may review your profile and past requests before contacting you. Currently, there’s no built-in chat, so ensure your request includes clear contact or pickup preferences."
+  },
+  {
+    "id": 4,
+    "question": "Can I update or delete my food listing?",
+    "answer": "Yes. Go to the My Shared Foods page. Each of your food items will have Update and Delete buttons. You can modify details except your name and email. Deleting a listing requires confirmation to avoid accidental removal."
+  },
+  {
+    "id": 5,
+    "question": "Why do I need to log in to access some features?",
+    "answer": "To keep the platform secure and prevent spam, features like sharing food, requesting food, and viewing detailed user interactions are restricted to logged-in users. This also helps ensure authenticity and traceability of donations."
+  },
+  {
+    "id": 6,
+    "question": "Is my personal data secure?",
+    "answer": "Yes. We use Firebase Authentication to ensure a secure login and registration process. Your credentials are never stored directly. Additionally, sensitive configurations are stored in `.env` files and your data (email, photo) is never shared with third parties."
+  },
+  {
+    "id": 7,
+    "question": "Can I log in using Google?",
+    "answer": "Yes! You can sign in using your Google account on both login and registration pages. It speeds up the process by automatically retrieving your name, email, and profile photo."
+  },
+  {
+    "id": 8,
+    "question": "How can I see who requested my food?",
+    "answer": "On the My Shared Foods page, each item includes a Requests button. Clicking it will show how many users requested the item, helping you choose the most suitable recipient."
+  }
+]
