@@ -36,7 +36,7 @@ const mainRoutes = createBrowserRouter([
       {
         path: "update/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/add-food/${params.id}`),
+          fetch(`https://mission-scic12-server-template.vercel.app/add-food/${params.id}`),
         Component: Update,
       },
       // {
@@ -59,7 +59,7 @@ const mainRoutes = createBrowserRouter([
         path: "/details/:foodId",
         loader: async ({ params }) => {
           const { data } = await axios.get(
-            `http://localhost:5000/details/${params.foodId}`
+            `https://mission-scic12-server-template.vercel.app/details/${params.foodId}`
           );
           return data;
         },

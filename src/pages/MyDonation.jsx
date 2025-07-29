@@ -15,7 +15,7 @@ const MyDonation = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/my-food", {
+      .get("https://mission-scic12-server-template.vercel.app/my-food", {
         headers: {
           Authorization: `Bearer ${user.accessToken}`,
         },
@@ -45,7 +45,7 @@ const MyDonation = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/add-food/${id}`).then((res) => {
+        axios.delete(`https://mission-scic12-server-template.vercel.app/add-food/${id}`).then((res) => {
           if (res.data.deletedCount) {
             setFoods((prevFoods) => prevFoods.filter((f) => f._id !== id));
             Swal.fire("Deleted!", "Your food has been deleted.", "success");

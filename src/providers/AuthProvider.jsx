@@ -60,7 +60,7 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log("🚀 ~ unsubscribe ~ currentUser:", currentUser);
 
-      // axios.get("http://localhost:5000/", {
+      // axios.get("https://mission-scic12-server-template.vercel.app/", {
       //   headers: {
       //     Authorization: `Bearer ${currentUser.accessToken}`,
       //   },

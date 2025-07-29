@@ -10,7 +10,7 @@ const FeatureFoods = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/feature-food")
+      .get("https://mission-scic12-server-template.vercel.app/feature-food")
       .then((res) => setFoods(res.data));
   }, []);
   return (

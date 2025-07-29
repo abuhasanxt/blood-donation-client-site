@@ -11,7 +11,7 @@ const MyRequest = () => {
   useEffect(() => {
     if (user?.accessToken) {
       axios
-        .get("http://localhost:5000/request", {
+        .get("https://mission-scic12-server-template.vercel.app/request", {
           headers: {
             Authorization: `Bearer ${user.accessToken}`,
           },

@@ -58,7 +58,7 @@ const AddDonation = () => {
       status: "available",
     };
 
-    axios.post("http://localhost:5000/add-food", data).then((res) => {
+    axios.post("https://mission-scic12-server-template.vercel.app/add-food", data).then((res) => {
       if (res.data.insertedId) {
         Swal.fire({
           position: "top-end",
@@ -78,7 +78,7 @@ const AddDonation = () => {
         onSubmit={handleSubmit}
         className="max-w-xl mx-auto p-6 bg-white rounded-xl shadow-md space-y-6"
       >
-        <h2 className="text-2xl font-semibold text-center">Add a Food</h2>
+        <h2 className="text-2xl font-semibold text-center">Add a Blood</h2>
 
         {/* District */}
         <div>

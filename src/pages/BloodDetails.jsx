@@ -14,7 +14,7 @@ const BloodDetails = () => {
   const handleRequest = () => {
     axios
       .patch(
-        `http://localhost:5000/request/${food._id}`,
+        `https://mission-scic12-server-template.vercel.app/request/${food._id}`,
         {donationAmount},
         {
           headers: {

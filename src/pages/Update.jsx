@@ -13,7 +13,7 @@ const Update = () => {
     const updatedFood = Object.fromEntries(formData.entries());
     console.log(updatedFood);
 
-    fetch(`http://localhost:5000/add-food/${_id}`, {
+    fetch(`https://mission-scic12-server-template.vercel.app/add-food/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
