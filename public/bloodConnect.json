@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+
+    "title": "Real-Time Requests",
+    "abd": "Respond instantly to urgent blood needs in your city or nearby.",
+    "photo": "https://i.ibb.co/nTfT1vZ/images.png"
+  },
+  {
+    "id": 2,
+
+    "title": "Mobile-Friendly",
+    "abd": "Access BloodConnect easily from any device—anytime, anywhere",
+    "photo": "https://i.ibb.co/v6wQVGHf/download.png"
+  },
+  {
+    "id": 3,
+
+    "title": "Verified Donors",
+    "abd": "All blood donors go through strict verification for safety and trust.",
+    "photo": "https://i.ibb.co/Kc9pZ3bQ/images.jpg"
+  },
+  {
+    "id": 4,
+
+    "title": "Nationwide Coverage",
+    "abd": "BloodConnect operates in major cities and remote areas alike.",
+    "photo": "https://i.ibb.co/9H1RQmSf/download-1.jpg"
+  },
+  {
+    "id": 5,
+
+    "title": "12,450+",
+    "abd": "Registered Donors",
+    "photo": "https://i.ibb.co/Xrsyht5H/download-1.png"
+  },
+  {
+    "id": 6,
+
+    "title": "8,320+",
+    "abd": "Lives Saved",
+    "photo": "https://i.ibb.co/8g6fPwQV/download-2.jpg"
+  }
+]

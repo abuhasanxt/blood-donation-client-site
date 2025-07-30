@@ -28,7 +28,7 @@ const Header = () => {
 
       <li>
         <NavLink to="/available-food" className="hover:underline">
-          Available Foods
+          Available Blood
         </NavLink>
       </li>
 

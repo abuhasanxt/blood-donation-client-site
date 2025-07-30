@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { FcBusinessman } from "react-icons/fc";
 import { Link } from "react-router";
 
-const AvailableFoods = () => {
+const AvailableBloods = () => {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
@@ -26,8 +26,8 @@ const AvailableFoods = () => {
       </motion.h2>
       {foods.length === 0 ? (
         <div className="text-center space-y-4">
-          <p className="text-gray-500 text-xl">No Available foods yet.</p>
-          <Link to="/add-food" className="btn btn-primary w-sm">
+          <p className="text-gray-500 text-xl">No Available Bloods yet.</p>
+          <Link to="/dashboard/create-request" className="btn btn-primary w-sm">
             Add Request
           </Link>
         </div>
@@ -96,4 +96,4 @@ const AvailableFoods = () => {
   );
 };
 
-export default AvailableFoods;
+export default AvailableBloods;

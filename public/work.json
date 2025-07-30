@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Register as Donor",
+    "description": "Sign up with your blood group and location to be ready to help those in need.",
+    "photo":"https://i.ibb.co/N6KTcPvz/download-3.png"
+  },
+  {
+    "id": 2,
+    "title": "Find or Request",
+    "description": "Search for donors or make a request that instantly reaches those nearby.",
+    "photo":"https://i.ibb.co/7NgfStH0/download-2.png"
+  },
+  {
+    "id": 3,
+    "title": "Connect & Donate",
+    "description": "Communicate securely with donors and donate blood where it's most needed.",
+    "photo":"https://i.ibb.co/8g6fPwQV/download-2.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Save a Life",
+    "description": "Every drop matters. Become someone’s hero by saving lives.",
+    "photo":"https://i.ibb.co/hRh4LtZ4/blood.webp"
+  }
+ 
+]

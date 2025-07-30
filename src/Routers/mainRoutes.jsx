@@ -6,7 +6,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import AddFoods from "../pages/AddDonation";
-import AvailableFoods from "../pages/AvailableFoods";
+import AvailableBloods from "../pages/AvailableBloods";
 import BloodDetails from "../pages/BloodDetails";
 import axios from "axios";
 import MyFood from "../pages/MyDonation";
@@ -31,7 +31,7 @@ const mainRoutes = createBrowserRouter([
       },
       {
         path: "/available-food",
-        Component: AvailableFoods,
+        Component: AvailableBloods,
       },
       {
         path: "update/:id",
