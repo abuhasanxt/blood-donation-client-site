@@ -18,6 +18,8 @@ import MyDonation from "../pages/MyDonation";
 import MyRequest from "../pages/MyRequest";
 import AllUser from "../pages/AllUser";
 import MyProfile from "../pages/MyProfile";
+import AllRequest from "../components/AllRequest";
+import Funding from "../components/Funding";
 
 const mainRoutes = createBrowserRouter([
   {
@@ -84,6 +86,14 @@ const mainRoutes = createBrowserRouter([
                 <Dashboard></Dashboard>
               </PrivateRoute>
             ),
+          },
+          {
+            path:'/dashboard/all-request',
+            Component:AllRequest
+          },
+          {
+            path:'/dashboard/funding',
+            Component:Funding
           },
           {
             path: "/dashboard/create-request",

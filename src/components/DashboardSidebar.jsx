@@ -31,10 +31,7 @@ const DashboardSidebar = ({ role, loading }) => {
 
         {role === "donor" && (
           <>
-            <h2
-              
-              className="bg-green-200 flex items-center gap-3 p-2  "
-            >
+            <h2 className="bg-green-200 flex items-center gap-3 p-2  ">
               <FaHome /> <span>Donor Dashboard</span>
             </h2>
 
@@ -85,17 +82,12 @@ const DashboardSidebar = ({ role, loading }) => {
               <FaUsersCog /> <span>All Users</span>
             </NavLink>
             <NavLink
-              to="/dashboard/all-blood-donation-request"
+              to="/dashboard/all-request"
               className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
             >
               <FaTint /> <span>All Blood Requests</span>
             </NavLink>
-            <NavLink
-              to="/dashboard/content-management"
-              className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
-            >
-              <FaBlogger /> <span>Content Management</span>
-            </NavLink>
+
             <NavLink
               to="/dashboard/funding"
               className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
@@ -108,10 +100,7 @@ const DashboardSidebar = ({ role, loading }) => {
         {/* Volunteer only */}
         {role === "volunteer" && (
           <>
-            <h2
-             
-              className="flex bg-green-200 items-center gap-3 p-2 "
-            >
+            <h2 className="flex bg-green-200 items-center gap-3 p-2 ">
               <FaHome /> <span>Volunteer Dashboard</span>
             </h2>
 
