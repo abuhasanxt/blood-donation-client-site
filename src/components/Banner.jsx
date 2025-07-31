@@ -1,5 +1,6 @@
 import { FaHeart } from "react-icons/fa";
 import img from "../assets/download.jpeg";
+import { Link } from "react-router";
 const Banner = () => {
   return (
     <section className="bg-contain bg-fixed py-10 px-4">
@@ -15,13 +16,13 @@ const Banner = () => {
             community of heroes making a difference one donation at a time.
           </p>
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-4">
-            <button className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300 flex items-center gap-2 shadow-md">
+            <Link to='/registration' className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300 flex items-center gap-2 shadow-md">
               <FaHeart className="text-white animate-pulse" />
               Become a Donor
-            </button>
-            <button className="border border-red-600 text-red-600 px-6 py-2 rounded-lg hover:bg-red-50 transition duration-300">
+            </Link>
+            <Link to='/available-food' className="border border-red-600 text-red-600 px-6 py-2 rounded-lg hover:bg-red-50 transition duration-300">
               Find Blood Donors
-            </button>
+            </Link>
           </div>
         </div>
 

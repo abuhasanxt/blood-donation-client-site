@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/blood.webp";
 import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
 import { Link } from "react-router";
@@ -12,8 +12,8 @@ const Footer = () => {
           {/* title  */}
           <div>
             <div className="text-2xl flex items-center gap-2 font-bold mb-2">
-              <img className="w-15" src={logo} alt="" />
-              <h2>Food Sharing</h2>
+              <img className="w-10" src={logo} alt="" />
+              <h2 className="text-red-600">Blood <span className="text-green-500">Connect</span></h2>
             </div>
             <p className="text-sm text-gray-400">
               Empowering users with seamless access to legal services.

@@ -105,23 +105,18 @@ const DashboardSidebar = ({ role, loading }) => {
             </h2>
 
             <NavLink
-              to="/dashboard/profile"
+              to="/dashboard/my-profile"
               className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
             >
               <FaUser /> <span>My Profile</span>
             </NavLink>
             <NavLink
-              to="/dashboard/all-blood-donation-request"
+              to="/dashboard/all-request"
               className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
             >
               <FaTint /> <span>All Blood Requests</span>
             </NavLink>
-            <NavLink
-              to="/dashboard/content-management"
-              className="flex items-center gap-3 p-2 rounded hover:bg-red-200 transition"
-            >
-              <FaBlogger /> <span>Content Management</span>
-            </NavLink>
+           
           </>
         )}
       </nav>

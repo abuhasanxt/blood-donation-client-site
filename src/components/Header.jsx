@@ -3,7 +3,7 @@ import { CiMenuBurger } from "react-icons/ci";
 import { Link, NavLink, useLocation, useNavigate } from "react-router";
 import "./Navbar.css";
 import { AuthContext } from "../providers/AuthProvider";
-import logo from "../assets/logo.png";
+import logo from "../assets/blood.webp";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -63,7 +63,7 @@ const Header = () => {
           src={logo}
           alt="Logo"
         />
-        <span className="font-bold text-lg">Food Sharing</span>
+        <h2 className="font-bold text-lg text-red-600">Blood <span className="text-green-500">Connect</span></h2>
       </div>
 
       {/* Center - Menu Links */}
