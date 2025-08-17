@@ -41,22 +41,7 @@ const mainRoutes = createBrowserRouter([
           fetch(`https://mission-scic12-server-template.vercel.app/add-food/${params.id}`),
         Component: Update,
       },
-      // {
-      //   path: "/request",
-      //   element: (
-      //     <PrivateRoute>
-      //       <RequestedFoods></RequestedFoods>
-      //     </PrivateRoute>
-      //   ),
-      // },
-      // {
-      //   path: "/my-food",
-      //   element: (
-      //     <PrivateRoute>
-      //       <MyFood></MyFood>
-      //     </PrivateRoute>
-      //   ),
-      // },
+  
       {
         path: "/details/:foodId",
         loader: async ({ params }) => {

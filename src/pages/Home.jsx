@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import Banner from "../components/Banner";
 import { AuthContext } from "../providers/AuthProvider";
-import FeatureFoods from "./FeatureFoods";
+
 import work from "../../public/work.json"
 import blood from "../../public/bloodConnect.json"
 
 import Bloods from "../components/Bloods";
 import Works from "./Works";
+import FeatureBloods from "./FeatureBloods";
 
 
 const Home = () => {
@@ -20,7 +21,7 @@ const Home = () => {
         </p>
       )}
       <Banner></Banner>
-      <FeatureFoods></FeatureFoods>
+     <FeatureBloods></FeatureBloods>
       <Bloods data={blood}></Bloods>
     <Works data={work}></Works>
     </>
