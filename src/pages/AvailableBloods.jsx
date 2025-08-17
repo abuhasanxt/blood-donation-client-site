@@ -14,7 +14,7 @@ const AvailableBloods = () => {
       .then((res) => setFoods(res.data));
   }, []);
   return (
-    <div>
+    <div className="min-h-screen mt-20">
       <motion.h2
         animate={{
           color: ["#ff5733", "#33ff33", "#8a33ff"],

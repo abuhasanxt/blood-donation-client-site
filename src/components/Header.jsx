@@ -32,15 +32,17 @@ const Header = () => {
         </NavLink>
       </li>
 
-      <li>
+      {user && (
+        <li>
         <button onClick={handleDashboardClick} className="hover:underline">
           Dashboard
         </button>
       </li>
+      )}
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm px-4 ">
+    <div className="navbar bg-base-100 fixed top-0 w-full z-50 shadow-sm">
       {/* Left - Logo and name */}
       <div className="navbar-start">
         <div className="dropdown">

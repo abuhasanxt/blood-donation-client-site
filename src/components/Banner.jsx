@@ -3,7 +3,7 @@ import img from "../assets/download.jpeg";
 import { Link } from "react-router";
 const Banner = () => {
   return (
-    <section className="bg-contain bg-fixed py-10 px-4">
+    <section className="bg-contain bg-fixed mt-20 py-10 px-4">
       <div className="flex flex-col md:flex-row items-center justify-around gap-6 max-w-6xl mx-auto bg-white bg-opacity-95 rounded-2xl shadow-xl p-6">
         {/* Left Side Text */}
         <div className="space-y-4 text-center md:text-left md:w-1/2">

@@ -8,7 +8,7 @@ const useAxiosSecure = () => {
   const instance = axios.create({
     baseURL: "https://mission-scic12-server-template.vercel.app",
     headers: {
-      Authorization: `Bearer ${user.accessToken}`,
+      Authorization: `Bearer ${user?.accessToken}`,
     },
   });
   return instance;
