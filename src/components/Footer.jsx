@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/blood.webp";
-import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 import { Link } from "react-router";
 
@@ -13,7 +13,9 @@ const Footer = () => {
           <div>
             <div className="text-2xl flex items-center gap-2 font-bold mb-2">
               <img className="w-10" src={logo} alt="" />
-              <h2 className="text-red-600">Blood <span className="text-green-500">Connect</span></h2>
+              <h2 className="text-red-600">
+                Blood <span className="text-green-500">Connect</span>
+              </h2>
             </div>
             <p className="text-sm text-gray-400">
               Empowering users with seamless access to legal services.
@@ -25,16 +27,21 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <Link className="hover:underline">Terms of service</Link>
+                <Link className="hover:underline">Terms of Condition</Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/dashboard/create-request"
+                  className="hover:underline"
+                >
+                  Donate Blood
+                </Link>
               </li>
               <li>
-                <Link className="hover:underline">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link className="hover:underline">Donate Food</Link>
-              </li>
-              <li>
-                <Link className="hover:underline">Request Food</Link>
+                <Link to="/dashboard/all-request" className="hover:underline">
+                  Request Blood
+                </Link>
               </li>
             </ul>
           </div>
@@ -43,7 +50,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-2">Connect With Us</h3>
             <div className="flex space-x-4 justify-center">
               <a
-                href="https://facebook.com"
+                href="https://web.facebook.com/abuhasanxyz8"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-blue-500"
@@ -51,23 +58,16 @@ const Footer = () => {
                 <FaFacebook />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://www.linkedin.com/in/abu-hasan8"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-blue-400"
               >
-                <FaTwitter />
+                <FaLinkedinIn />
               </a>
+
               <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-pink-500"
-              >
-                <FaInstagram />
-              </a>
-              <a
-                href="https://github.com"
+                href="https://github.com/abuhasanxt"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-gray-400"

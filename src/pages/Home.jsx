@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <>
       {user && (
-        <p className="text-center text-xl font-bold py-2  ">
+        <p className="text-center text-xl mt-20 font-bold py-2  ">
           Welcome Mr. {user?.displayName} ❤️‍🔥❤️‍🔥. Now You Can Watch All the
           Recipies🍉🍉
         </p>

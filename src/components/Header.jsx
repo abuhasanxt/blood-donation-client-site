@@ -34,10 +34,10 @@ const Header = () => {
 
       {user && (
         <li>
-        <button onClick={handleDashboardClick} className="hover:underline">
-          Dashboard
-        </button>
-      </li>
+          <button onClick={handleDashboardClick} className="hover:underline">
+            Dashboard
+          </button>
+        </li>
       )}
     </>
   );
@@ -65,7 +65,9 @@ const Header = () => {
           src={logo}
           alt="Logo"
         />
-        <h2 className="font-bold text-lg text-red-600">Blood <span className="text-green-500">Connect</span></h2>
+        <h2 className="font-bold text-lg text-red-600">
+          Blood <span className="text-green-500">Connect</span>
+        </h2>
       </div>
 
       {/* Center - Menu Links */}
