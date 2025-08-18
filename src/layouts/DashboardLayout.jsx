@@ -1,30 +1,8 @@
-// import React from "react";
-
-// import { Outlet } from "react-router";
-// import DashboardSidebar from "../components/DashboardSidebar";
-// import useRole from "../Utility/useRole";
-
-// const DashboardLayout = () => {
-//   const { role,loading } = useRole()
-//   return (
-//     <div className="flex mt-16">
-//       <DashboardSidebar loading={loading} role={role} />
-//       <div className="flex-1 p-4 bg-gray-50 min-h-screen">
-//         <Outlet />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default DashboardLayout;
-
-
-
 import React, { useState } from "react";
 import { Outlet } from "react-router";
 import DashboardSidebar from "../components/DashboardSidebar";
 import useRole from "../Utility/useRole";
-import Header from "../components/Header"; // আগের Navbar import করলাম
+import Header from "../components/Header";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const DashboardLayout = () => {
@@ -37,9 +15,7 @@ const DashboardLayout = () => {
       <Header />
 
       {/* ✅ Main Layout */}
-      <div className="flex flex-1 pt-16"> 
-        {/* pt-16 → কারণ navbar fixed, তাই নিচে gap রাখা হলো */}
-
+      <div className="flex flex-1 pt-16">
         {/* Sidebar */}
         <div
           className={`fixed lg:static top-16 left-0 h-full z-40 transform 
